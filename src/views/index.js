@@ -1,7 +1,7 @@
 'use strict';
 
 import '/src/styles/main.css';
-import '/src/views/home.css';
+import './index.css';
 
 // import foto_01 from '/src/assets/images/foto-01.jpg';
 // import foto_02 from '/src/assets/images/foto-02.jpg';

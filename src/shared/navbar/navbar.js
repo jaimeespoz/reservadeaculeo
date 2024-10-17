@@ -7,7 +7,7 @@ const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `
     <header class="header">
         <div class="logo">
-            <img src="${logo}" alt=Reserva de Aculeo">
+            <a href="/index.html"><img src="${logo}" alt=Reserva de Aculeo"></a>
         </div>
         <nav>
             <ul class="nav-links">

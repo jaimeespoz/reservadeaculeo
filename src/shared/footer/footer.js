@@ -1,64 +1,101 @@
-import '/src/styles/main.css';
-import './footer.css';
+'use strict';
+import '../../styles/styles.css';
+import '../../../src/shared/footer/footer.css';
 
 import logo from '/src/assets/images/Logo.png';
 
 const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `
-<div class="footer">   
-    <div class="container2">
-        <div class="content">
-            <div class="layout">
-                <div class="panel_logo">
-                    <a href="/">
-                        <img src="${logo}" class="img" alt="" />
-                    </a>
-                    <div class="resena">
-                        <p class="resena-titulo">Junta de Vecinos</p>
-                        <p class="resena-titulo">Reserva de Aculeo</p>
-                        <p class="resena-otros">Constitucion: Octubre-2024</p>
-                        <p class="resena-subtitulo">Comuna de Paine</p>
-                        <p class="resena-subtitulo">Region Metropolitana</p>
+    <div class="contenedor">
+        <div class="contenido">
+            <div class="frame-footer">
+            <div class="wrapper-footer">
+                <div class="layer-footer">
+                    <div>
+                        <a href="/">
+                            <img src="${logo}" class="logo-chico" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <span class="text-title-large">Junta de Vecinos</span>
+                        <span class="text-title-large">Reserva de Aculeo</span>
+                        <span class="text-body-small">Const.: Octubre-2024</span>
+                        <span class="text-body-small">Comuna de Paine</span>
+                        <span class="text-body-small">Region Metropolitana</span>
                     </div>
                 </div>
-                <div class="panel_info">
-                    <span class="panel_info_titulo">Contacto<span>
-                    <span class="panel_info_subtitulo">Direccion:</span>
-                    <span class="panel_info_texto">Parcela xx</span>
-                    <span class="panel_info_texto">Condominio Parque Cantillana</span>
-                    <span class="panel_info_texto">(ex Alto Laguna)</span>
-                    <span class="panel_info_texto">Ruta G-546 - Klm. 19,5</span>
-                    <span class="panel_info_texto">Comuna de Paine</span>
-                    <span class="panel_info_subtitulo">Email:<span>
-                    <span class="panel_info_texto">contacto@reservadeaculeo.cl</span>
-                    <span class="panel_info_subtitulo">Telefono:<span>
-                    <span class="panel_info_texto">+56 9 1234 1234</span>
-                </div>
-                <div class="panel_info">
-                    <span class="panel_info_titulo">Incorporacion<span>
-                    <ul>
-                        <li>
-                            <a href="/enconstruccion.html"><span>Proxima Reunion</span></a>
-                            <a href="/enconstruccion.html"><span>Tema x Tema x Tema x</span></a>
-                            <a href="/enconstruccion.html"><span>Tema y Tema y Tema y</span></a>
-                            <a href="/enconstruccion.html"><span>Tema z Tema z Tema z</span></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="panel_info">
-                    <span class="panel_info_titulo">Nuestra Comunidad<span>
-                    <ul>
-                        <li>
-                            <a href="/enconstruccion.html"><span>Actividades</span></a>
-                            <a href="/enconstruccion.html"><span>Tema x Tema x Tema x</span></a>
-                            <a href="/enconstruccion.html"><span>Tema y Tema y Tema y</span></a>
-                            <a href="/enconstruccion.html"><span>Tema z Tema z Tema z</span></a>
-                        </li>
-                    </ul>
+                <div class="layer-footer">
+                    <div class="col-footer">
+                        <span class="text-title-large">Contacto<span>
+                                <span class="text-body-large mt-2">Direccion:</span>
+                                <span class="text-body-small">Parcela xx</span>
+                                <span class="text-body-small">Condominio Parque Cantillana</span>
+                                <span class="text-body-small">(ex Alto Laguna)</span>
+                                <span class="text-body-small">Ruta G-546 - Klm. 19,5</span>
+                                <span class="text-body-small">Comuna de Paine</span>
+                                <span class="text-body-large mt-2">Email:<span>
+                                        <span class="text-body-small">contacto@reservadeaculeo.cl</span>
+                                        <span class="text-body-large mt-2">Telefono:<span>
+                                                <span class="text-body-small">+56 9 1234 1234</span>
+                    </div>
+                    <div class="col-footer">
+                        <span class="text-title-large">Incorporacion<span>
+                                <ul>
+                                    <li>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Proxima
+                                                Reunion</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema x Tema x
+                                                Tema
+                                                x</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema y Tema y
+                                                Tema
+                                                y</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema z Tema z
+                                                Tema
+                                                z</span></a>
+                                    </li>
+                                </ul>
+                    </div>
+                    <div class="col-footer">
+                        <span class="text-title-large">Nuestra Comunidad<span>
+                                <ul>
+                                    <li>
+                                        <a href="/enconstruccion.html"><span
+                                                class="text-body-small">Actividades</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema x Tema x
+                                                Tema
+                                                x</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema y Tema y
+                                                Tema
+                                                y</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema z Tema z
+                                                Tema
+                                                z</span></a>
+                                    </li>
+                                </ul>
+                    </div>
+                    <div class="col-footer">
+                        <span class="text-title-large">Otra Info<span>
+                                <ul>
+                                    <li>
+                                        <a href="/enconstruccion.html"><span class="text-body-medium">Proxima
+                                                Reunion.</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema x Tema x
+                                                Tema
+                                                x</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema y Tema y
+                                                Tema
+                                                y</span></a>
+                                        <a href="/enconstruccion.html"><span class="text-body-small">Tema z Tema z
+                                                Tema
+                                                z</span></a>
+                                    </li>
+                                </ul>
+                    </div>
                 </div>
             </div>
+            </div>
         </div>
-    </div>
     </div>
 `;
 

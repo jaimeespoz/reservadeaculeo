@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const dotenv = require('dotenv').config({ path: './.env' });
 
 const devMode = process.env.NODE_ENV !== 'production';
-// const isProductionMode = process.env.NODE_ENV === "production";
+const isProductionMode = process.env.NODE_ENV === 'production';
 const buildPath = path.resolve(__dirname, 'dist');
 
 const babelConfig = [
@@ -22,10 +22,15 @@ const babelConfig = [
 module.exports = {
     mode: process.env.NODE_ENV,
 
+    // target: 'node',
+
     entry: {
-        index: './src/views/index.js',
+        index: path.resolve(__dirname, './src/views/index.js'),
         quienes_somos: './src/quienes_somos/quienes_somos.js',
         login: '/src/login/login.js',
+        // navbar: '/src/shared/navbar/navbar.js',
+        // footer: '/src/shared/footer/footer.js',
+        // home: '/src/shared/home/home.js',
         contacto: './src/contacto/contacto.js',
         enconstruccion: './src/shared/enconstruccion/enconstruccion.js',
     },
@@ -75,7 +80,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: './src/views/contacto.html',
+            template: './src/contacto/contacto.html',
             chunks: ['contacto'],
             filename: 'contacto.html',
             minify: {
@@ -89,7 +94,21 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: './src/views/login.html',
+            template: './src/shared/home/home.html',
+            chunks: ['home'],
+            filename: 'home.html',
+            minify: {
+                collapseWhitespace: true,
+                removeComments: true,
+                removeRedundantAttributes: true,
+                removeScriptTypeAttributes: true,
+                removeStyleLinkTypeAttributes: true,
+                useShortDoctype: true,
+            },
+        }),
+        new HtmlWebpackPlugin({
+            title: 'Development',
+            template: './src/login/login.html',
             chunks: ['login'],
             filename: 'login.html',
             minify: {
@@ -103,7 +122,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: './src/views/quienes_somos.html',
+            template: './src/quienes_somos/quienes_somos.html',
             chunks: ['quienes_somos'],
             filename: 'quienes_somos.html',
             minify: {
@@ -117,7 +136,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: './src/views/enconstruccion.html',
+            template: './src/shared/enconstruccion/enconstruccion.html',
             chunks: ['enconstruccion'],
             filename: 'enconstruccion.html',
             minify: {
@@ -130,7 +149,10 @@ module.exports = {
             },
         }),
         new MiniCssExtractPlugin({
-            filename: devMode ? '[name].css' : '[name].[contenthash].css',
+            // filename: devMode ? '[name].css' : '[name].[contenthash].css',
+            filename: isProductionMode
+                ? '[name].[contenthash].css'
+                : '[name].css',
         }),
     ],
 
@@ -153,14 +175,7 @@ module.exports = {
                         loader: 'postcss-loader',
                         options: {
                             postcssOptions: {
-                                plugins: [
-                                    [
-                                        'autoprefixer',
-                                        {
-                                            // Options
-                                        },
-                                    ],
-                                ],
+                                plugins: () => require['autoprefixer'],
                             },
                         },
                     },

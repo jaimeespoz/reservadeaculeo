@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '/src/styles/main.css';
-import '/src/quienes_somos/quienes_somos.css';
+'use strict';
+import '../styles/styles.css';
+import '../../src/quienes_somos/quienes_somos.css';
 
 import colchane from '/src/assets/images/Colchane.jpg';
 
@@ -10,12 +10,12 @@ import { footer } from '/src/shared/footer/footer';
 const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `
     <div class="contenedor">
-        <div id="nabvar"></div>
         <div class="contenido">
-            <div class="wrapper">
-                <div class="panel">
-                    <article class="card">
-                        <img class="tit-ppal-imagen" alt="" src="${colchane}" />
+        <div class="frame-quienes">
+            <div class="wrapper-quienes">
+                <div class="layer-quienes">
+                    <article class="cardo">
+                        <img alt="" src="${colchane}" />
                         <div class="card__modal">
                             <p>
                                 Rio Calle-calle - Ciudad de Valdivia - Region De los Rios -
@@ -24,7 +24,7 @@ container.innerHTML = `
                         </div>
                     </article>
                 </div>
-                <div class="panel">
+                <div class="layer-quienes">
                     <div>
                         <span class="titulo">Envienos un Mensaje</span>
                     </div>
@@ -63,7 +63,8 @@ container.innerHTML = `
                     </div>
                 </div>
             </div>
-            <div id="footer"></div>
+        </div>
+        </div>
         </div>
 `;
 
@@ -71,14 +72,14 @@ document.getElementById('navbar').appendChild(navbar);
 document.getElementById('main').appendChild(container);
 document.getElementById('footer').appendChild(footer);
 
-const body = document.body;
+// const body = document.body;
 
-const boton = document.createElement('button');
-boton.innerText = 'volver';
-boton.className = 'btn btn-primary btn-sm';
-body.appendChild(boton);
+// const boton = document.createElement('button');
+// boton.innerText = 'volver';
+// boton.className = 'btn btn-primary btn-sm';
+// body.appendChild(boton);
 
-boton.addEventListener('click', () => {
-    console.log('aca el boton');
-    window.location = '/';
-});
+// boton.addEventListener('click', () => {
+//     console.log('aca el boton');
+//     window.location = '/';
+// });

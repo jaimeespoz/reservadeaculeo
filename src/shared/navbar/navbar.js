@@ -1,10 +1,13 @@
-import '/src/styles/main.css';
-import './navbar.css';
+'use strict';
+import '../../styles/styles.css';
+import '../navbar/navbar.css';
 
 import logo from '/src/assets/images/Logo.png';
 
 const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `
+<div class="contenedor">
+<div class="contenido">
     <header class="header">
         <div class="logo">
             <a href="/index.html"><img src="${logo}" alt=Reserva de Aculeo"></a>
@@ -19,6 +22,8 @@ container.innerHTML = `
         </nav>
         <a href="/contacto.html" class="btn"><button type="button">Contacto</button></a>
     </header>
+    </div>
+</div>    
 `;
 
 const navbar = container;

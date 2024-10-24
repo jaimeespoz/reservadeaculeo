@@ -1,13 +1,13 @@
 require('dotenv').config();
-
+const path = require('path');
 const express = require('express');
 const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const { logger } = require('./logEvents.js');
 
-const path = require('path');
-const cors = require('cors');
+// const path = require('path');
+// const cors = require('cors');
 
 // Initializacion
 const app = express();
@@ -18,9 +18,9 @@ const compiler = webpack(config);
 require('./database');
 
 // settings
-app.set('views', path.join(__dirname, 'src/views'));
-app.engine('html', require('ejs').renderFile);
-app.set('view engine', 'html');
+// app.set('views', path.join(__dirname, 'src/views'));
+// app.engine('html', require('ejs').renderFile);
+// app.set('view engine', 'html');
 app.set('port', process.env.PORT);
 
 // Middleware
@@ -34,7 +34,7 @@ app.use(
     // app.use(morgan('dev'))
     .use(express.urlencoded({ extended: false }))
     .use(express.json())
-    .use(cors())
+    // .use(cors())
     .use(logger);
 
 const homeRutas = require('./routes/index');

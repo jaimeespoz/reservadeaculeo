@@ -1,5 +1,5 @@
-import '../../styles/main.css';
-import './enconstruccion.css';
+'use strict';
+import '../../styles/styles.css';
 
 import enconstruccion from '/src/assets/images/enconstruccion.png';
 

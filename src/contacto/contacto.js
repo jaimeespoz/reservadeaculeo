@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../../src/styles/main.css';
-import './contacto.css';
+'use strict';
+import '../../src/styles/styles.css';
+import '../../src/contacto/contacto.css';
 
 import isladepascua from '/src/assets/images/IsladePascua.jpg';
 
@@ -11,10 +11,11 @@ const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `
     <div class="contenedor">
         <div class="contenido">
-            <div class="wrapper">
-                <div class="panel">
-                    <article class="card">
-                        <img class="tit-ppal-imagen" alt="" src="${isladepascua}" />
+            <div class="frame-contacto">
+            <div class="wrapper-contacto">
+                <div class="layer-contacto">
+                    <article class="cardo">
+                        <img class="img-contacto" alt="" src="${isladepascua}" />
                         <div class="card__modal">
                             <p>
                                 Rio Calle-calle - Ciudad de Valdivia - Region De los Rios -
@@ -23,46 +24,48 @@ container.innerHTML = `
                         </div>
                     </article>
                 </div>
-                <div class="panel">
+                <div class="layer-contacto formulario-contacto">
                     <div>
-                        <span class="titulo">Envienos un Mensaje</span>
+                        <span class="text-headline-small">Envienos un Mensaje</span>
                     </div>
-                    <div class="border">
+                    <div class="border formulario-contacto">
                         <form>
                             <div class="row">
-                                <div class="col-md-12 mb-3">
-                                    <label for="nombre" class="form-label">Nombre</label>
-                                    <input type="text" class="form-control" id="nombre" placeholder="Ingrese su nombre">
+                                <div class="col-md-12 my-3">
+                                    <label for="nombre" class="text-label-large text-start">Nombre Completo</label>
+                                    <input type="text" class="text-body-large" id="nombre" placeholder="Ingrese su nombre">
                                 </div>
-                                <div class="col-md-12 mb-3">
-                                    <label for="correo" class="form-label">Correo
+                                <div class="col-md-12 my-3">
+                                    <label for="correo" class="text-label-large text-start">Correo
                                         Electronico</label>
-                                    <input type="email" class="form-control" id="correo"
+                                    <input type="email" class="text-body-large" id="correo"
                                         placeholder="Ingrese su correo electronico">
                                 </div>
-                                <div class="col-md-12 mb-3">
-                                    <label for="asunto" class="form-label">Asunto del
+                                <div class="col-md-12 my-3">
+                                    <label for="asunto" class="text-label-large text-start">Asunto del
                                         Mensaje</label>
-                                    <input type="text" class="form-control" id="asunto"
+                                    <input type="text" class="text-body-large" id="asunto"
                                         placeholder="Ingrese el Asunto del Mensaje">
                                 </div>
-                                <div class="col-md-12 mb-3">
-                                    <label for="mensaje" class="form-label">Texto del
+                                <div class="col-md-12 my-3">
+                                    <label for="mensaje" class="text-label-large text-start">Texto del
                                         Mensaje</label>
                                     <textarea placeholder="Ingrese un texto..."
-                                        class="modal-text custom-scrollbar"></textarea>
+                                        class="text-body-large custom-scrollbar"></textarea>
                                     <!-- <input type="text" class="form-control text-body-medium" id="mensaje"
                                     placeholder="Ingrese el texto del mensaje"> -->
                                 </div>
-                                <div class="col-md-12 mb-3">
-                                    <button type="submit" class="btn btn-sm btn-primary">Enviar</button>
+                                <div class="col-md-12 my-3">
+                                    <button type="submit" class="btn btn-lg btn-primary">Enviar</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
+            </div>
         </div>
+    </div>
 `;
 
 document.getElementById('navbar').appendChild(navbar);

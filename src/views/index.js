@@ -1,8 +1,8 @@
 'use strict';
-import '../styles/styles.css';
+// import '../styles/styles.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 // import foto_01 from '/src/assets/images/foto-01.jpg';
 // import foto_02 from '/src/assets/images/foto-02.jpg';
@@ -27,8 +27,14 @@ document.getElementById('navbar').appendChild(navbar);
 document.getElementById('main').appendChild(home);
 document.getElementById('footer').appendChild(footer);
 
-const bars = document.querySelector(".bars");
-bars.addEventListener("click", () => {
-  const navBar = document.querySelector(".nav-bar");
-  navBar.classList.toggle("active");
+const bars = document.querySelector('.bars');
+bars.addEventListener('click', () => {
+    const navBar = document.querySelector('.nav-bar');
+    navBar.classList.toggle('active');
 });
+
+function add(a, b) {
+    return a + b;
+}
+
+export { add };

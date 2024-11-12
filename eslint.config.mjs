@@ -1,11 +1,7 @@
-import globals from 'globals';
+import globals from "globals";
 
+
+/** @type {import('eslint').Linter.Config[]} */
 export default [
-    { languageOptions: { globals: globals.node } },
-    {
-        rules: {
-            'no-unused-vars': 'warn',
-            'no-undef': 'warn',
-        },
-    },
+  {languageOptions: { globals: globals.node }},
 ];

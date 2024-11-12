@@ -2,6 +2,9 @@
 import '../styles/styles.css';
 import '../../src/quienes_somos/quienes_somos.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 import colchane from '/src/assets/images/Colchane.jpg';
 
 import { navbar } from '/src/shared/navbar/navbar';

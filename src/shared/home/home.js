@@ -2,6 +2,11 @@
 import '../../styles/styles.css';
 import '../../../src/shared/home/home.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
+import '@fortawesome/fontawesome-free/js/all.js';
+
 import foto_05 from '/src/assets/images/foto-05.jpg';
 import foto_06 from '/src/assets/images/foto-06.jpg';
 import copihues from '/src/assets/images/copihues.jpg';

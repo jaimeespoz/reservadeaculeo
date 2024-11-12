@@ -59,7 +59,7 @@ module.exports = {
         },
         hot: true,
         compress: true,
-        port: 3000,
+        port: process.env.PORT,
         open: true,
     },
 
@@ -161,6 +161,14 @@ module.exports = {
             {
                 test: /.(js|jsx)$/i,
                 use: babelConfig,
+            },
+
+            {
+                test: /.(svg|eot|woff|woff2|ttf)$/i,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'fonts'
+                }
             },
 
             {

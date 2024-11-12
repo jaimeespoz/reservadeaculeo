@@ -2,6 +2,9 @@
 import '../../src/styles/styles.css';
 import '../../src/contacto/contacto.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 import isladepascua from '/src/assets/images/IsladePascua.jpg';
 
 import { navbar } from '/src/shared/navbar/navbar';

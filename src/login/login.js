@@ -4,6 +4,9 @@ import '../../src/login/login.css';
 
 import Valdivia from '/src/assets/images/Valdivia.jpg';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 import { navbar } from '../shared/navbar/navbar';
 import { footer } from '../shared/footer/footer';
 

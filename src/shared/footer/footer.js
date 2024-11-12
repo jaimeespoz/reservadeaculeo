@@ -4,6 +4,9 @@ import '../../../src/shared/footer/footer.css';
 
 import logo from '/src/assets/images/Logo.png';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `
     <div class="contenedor">

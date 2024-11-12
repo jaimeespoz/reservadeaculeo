@@ -1,6 +1,9 @@
 'use strict';
 import '../../styles/styles.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 import enconstruccion from '/src/assets/images/enconstruccion.png';
 
 import { navbar } from '../navbar/navbar';

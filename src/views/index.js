@@ -1,6 +1,9 @@
 'use strict';
 import '../styles/styles.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 // import foto_01 from '/src/assets/images/foto-01.jpg';
 // import foto_02 from '/src/assets/images/foto-02.jpg';
 // import foto_03 from '/src/assets/images/foto-03.jpg';
@@ -24,13 +27,8 @@ document.getElementById('navbar').appendChild(navbar);
 document.getElementById('main').appendChild(home);
 document.getElementById('footer').appendChild(footer);
 
-// const home = container;
-
-// const boton = document.createElement('button');
-// boton.innerText = 'volver';
-// boton.className = 'btn btn-primary btn-sm';
-// document.getElementById('main').appendChild(boton);
-
-// boton.addEventListener('click', () => {
-//     window.location = '/';
-// });
+const bars = document.querySelector(".bars");
+bars.addEventListener("click", () => {
+  const navBar = document.querySelector(".nav-bar");
+  navBar.classList.toggle("active");
+});

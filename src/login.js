@@ -1,14 +1,14 @@
 'use strict';
-import '../../src/styles/styles.css';
-import '../../src/login/login.css';
+import '/src/styles.css';
+// import '../../src/login/login.css';
 
 import Valdivia from '/src/assets/images/Valdivia.jpg';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
-import { navbar } from '../shared/navbar/navbar';
-import { footer } from '../shared/footer/footer';
+import { navbar } from './navbar';
+import { footer } from './footer';
 
 const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `

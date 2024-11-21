@@ -25,14 +25,7 @@ module.exports = {
     // target: 'node',
 
     entry: {
-        index: path.resolve(__dirname, './src/views/index.js'),
-        quienes_somos: './src/quienes_somos/quienes_somos.js',
-        login: '/src/login/login.js',
-        // navbar: '/src/shared/navbar/navbar.js',
-        // footer: '/src/shared/footer/footer.js',
-        // home: '/src/shared/home/home.js',
-        contacto: './src/contacto/contacto.js',
-        enconstruccion: './src/shared/enconstruccion/enconstruccion.js',
+        index: path.resolve(__dirname, './src/index.js'),
     },
 
     output: {
@@ -66,79 +59,9 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: './src/views/index.html',
+            template: './src/index.html',
             chunks: ['index'],
             filename: 'index.html',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Development',
-            template: './src/contacto/contacto.html',
-            chunks: ['contacto'],
-            filename: 'contacto.html',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Development',
-            template: './src/shared/home/home.html',
-            chunks: ['home'],
-            filename: 'home.html',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Development',
-            template: './src/login/login.html',
-            chunks: ['login'],
-            filename: 'login.html',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Development',
-            template: './src/quienes_somos/quienes_somos.html',
-            chunks: ['quienes_somos'],
-            filename: 'quienes_somos.html',
-            minify: {
-                collapseWhitespace: true,
-                removeComments: true,
-                removeRedundantAttributes: true,
-                removeScriptTypeAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                useShortDoctype: true,
-            },
-        }),
-        new HtmlWebpackPlugin({
-            title: 'Development',
-            template: './src/shared/enconstruccion/enconstruccion.html',
-            chunks: ['enconstruccion'],
-            filename: 'enconstruccion.html',
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
@@ -163,13 +86,13 @@ module.exports = {
                 use: babelConfig,
             },
 
-            {
-                test: /.(svg|eot|woff|woff2|ttf)$/i,
-                loader: 'file-loader',
-                options: {
-                    outputPath: 'fonts'
-                }
-            },
+            // {
+            //     test: /.(svg|eot|woff|woff2|ttf)$/i,
+            //     loader: 'file-loader',
+            //     options: {
+            //         outputPath: 'fonts',
+            //     },
+            // },
 
             {
                 test: /\.(sa|sc|c)ss$/,

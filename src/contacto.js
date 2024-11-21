@@ -1,14 +1,10 @@
 'use strict';
-import '../../src/styles/styles.css';
-import '../../src/contacto/contacto.css';
+import '/src/styles.css';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import isladepascua from '../assets/images/IsladePascua.jpg';
 
-import isladepascua from '/src/assets/images/IsladePascua.jpg';
-
-import { navbar } from '/src/shared/navbar/navbar';
-import { footer } from '/src/shared/footer/footer';
+import { navbar } from '/src/navbar.js';
+import { footer } from '/src/footer.js';
 
 const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `
@@ -35,28 +31,28 @@ container.innerHTML = `
                         <form>
                             <div class="row">
                                 <div class="col-md-12 my-3">
-                                    <label for="nombre" class="text-label-large text-start">Nombre Completo</label>
-                                    <input type="text" class="text-body-large" id="nombre" placeholder="Ingrese su nombre">
+                                    <label for="nombre" class="form-label text-label-large">Nombre Completo</label>
+                                    <input type="text" class="form-control text-body-large" id="nombre" placeholder="Ingrese su nombre">
                                 </div>
                                 <div class="col-md-12 my-3">
-                                    <label for="correo" class="text-label-large text-start">Correo
+                                    <label for="correo" class="form-label text-label-large text-start">Correo
                                         Electronico</label>
-                                    <input type="email" class="text-body-large" id="correo"
+                                    <input type="email" class="form-control text-body-large" id="correo"
                                         placeholder="Ingrese su correo electronico">
                                 </div>
                                 <div class="col-md-12 my-3">
-                                    <label for="asunto" class="text-label-large text-start">Asunto del
+                                    <label for="asunto" class="form-label text-label-large text-start">Asunto del
                                         Mensaje</label>
-                                    <input type="text" class="text-body-large" id="asunto"
+                                    <input type="text" class="form-control text-body-large" id="asunto"
                                         placeholder="Ingrese el Asunto del Mensaje">
                                 </div>
                                 <div class="col-md-12 my-3">
-                                    <label for="mensaje" class="text-label-large text-start">Texto del
+                                    <label for="mensaje" class="form-label text-label-large text-start">Texto del
                                         Mensaje</label>
                                     <textarea placeholder="Ingrese un texto..."
                                         class="text-body-large custom-scrollbar"></textarea>
-                                    <!-- <input type="text" class="form-control text-body-medium" id="mensaje"
-                                    placeholder="Ingrese el texto del mensaje"> -->
+                                     <input type="text" class="form-control text-body-medium" id="mensaje"
+                                    placeholder="Ingrese el texto del mensaje">
                                 </div>
                                 <div class="col-md-12 my-3">
                                     <button type="submit" class="btn btn-lg btn-primary">Enviar</button>

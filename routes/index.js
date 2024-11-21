@@ -18,7 +18,7 @@ router.get('/quienes_somos', (req, res) => {
 });
 
 router.get('/enconstruccion', (req, res) => {
-    res.render('enconstruccion.html');
+    res.render('src/enconstruccion.html');
 });
 
 module.exports = router;

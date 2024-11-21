@@ -1,14 +1,10 @@
 'use strict';
-import '../styles/styles.css';
-import '../../src/quienes_somos/quienes_somos.css';
-
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'bootstrap/dist/js/bootstrap.min.js'
+import '/src/styles.css';
 
 import colchane from '/src/assets/images/Colchane.jpg';
 
-import { navbar } from '/src/shared/navbar/navbar';
-import { footer } from '/src/shared/footer/footer';
+import { navbar } from '/src/navbar';
+import { footer } from '/src/footer';
 
 const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `

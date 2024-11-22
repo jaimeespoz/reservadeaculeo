@@ -9,6 +9,7 @@ jobs:
         env:
             platform: digital-ocean
             mongodb_uri: ${{ secrets.MONGODB_URI}}
+            ssh: ${{ secrets.SSH}}
 
         runs-on: ubuntu-latest
 
@@ -28,6 +29,11 @@ jobs:
               if: ${{ env.platform == 'digital-ocean' }}
               run: |
                   echo "Plataforma: ${{ env.platform }}"
+
+            - name: Deploy the app
+              uses: digitalocean/app_action/deploy@v2
+              with:
+                  token: ${{ secrets.SSH }}
 
             - name: Build
               run: |

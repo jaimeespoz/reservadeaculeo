@@ -4,7 +4,7 @@ import Valdivia from '/src/assets/images/Valdivia.jpg';
 import foto05 from '/src/assets/images/foto-05.jpg';
 import foto06 from '/src/assets/images/foto-06.jpg';
 import copihues from '/src/assets/images/copihues.jpg';
-import chilenidad from '/src/assets/images/semana-de-la-chilenidad-2019.jpg';
+import chilenidad from '/src/assets/images/Semana-de-la-Chilenidad-2019.jpg';
 
 const /* {HTMLElement} */ container = document.createElement('div');
 container.innerHTML = `<div class="contenedor">

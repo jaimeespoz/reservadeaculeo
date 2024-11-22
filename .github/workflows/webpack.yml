@@ -32,7 +32,6 @@ jobs:
 
             - name: 'ppp'
               run: |
-                  root@143.198.58.136
                   ls -l
 
             - name: Build

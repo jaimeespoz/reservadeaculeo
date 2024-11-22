@@ -25,7 +25,7 @@
     --btn-fore-dark: rgba(32, 26, 24, 1);
     --btn-border-dark: rgba(88, 88, 88, 1);
     --body-back-dark: rgba(30, 31, 38, 1);
-    --body-fore-dark: rgba(255, 251, 255, 1);
+    --body-fore-dark: rgba(255, 251, 255, 0.65);
     --footer-back-dark: rgba(22, 24, 27, 1);
     --footer-fore-dark: rgba(255, 251, 255, 0.65);
     --background-dark: rgba(32, 26, 24, 1);
@@ -868,7 +868,7 @@ input::placeholder {
 /* home */
 
 .frame-home {
-    background-color: rgb(255, 255, 255, 0.8);
+    /* background-color: rgb(255, 255, 255, 0.8); */
     padding: 48px;
 }
 
@@ -907,7 +907,7 @@ input::placeholder {
 
 @media screen and (max-width: 360px) {
     .frame-home {
-        background-color: rgb(255, 255, 255, 0.8);
+        /* background-color: rgb(255, 255, 255, 0.8); */
         padding: 6px;
     }
 
@@ -933,7 +933,7 @@ input::placeholder {
 
 @media screen and (max-width: 390px) {
     .frame-home {
-        background-color: rgb(255, 255, 255, 0.8);
+        /* background-color: rgb(255, 255, 255, 0.8); */
         padding: 6px;
     }
 
@@ -959,7 +959,7 @@ input::placeholder {
 
 @media screen and (max-width: 500px) {
     .frame-home {
-        background-color: rgb(255, 255, 255, 0.8);
+        /* background-color: rgb(255, 255, 255, 0.8); */
         padding: 6px;
     }
 

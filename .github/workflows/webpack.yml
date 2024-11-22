@@ -30,10 +30,10 @@ jobs:
               run: |
                   echo "Plataforma: ${{ env.platform }}"
 
-            - name: Deploy the app
-              uses: digitalocean/app_action/deploy@v2
-              with:
-                  token: ${{ secrets.SSH }}
+            - name: 'ppp'
+              run: |
+                  root@143.198.58.136
+                  ls -l
 
             - name: Build
               run: |

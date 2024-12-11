@@ -1,14 +1,20 @@
 'use strict';
 
+import { enConstruccionModal } from '../enconstruccion';
+import { loginModal } from '../login';
+import { qsModal } from '../../quienes_somos/quienes_somos';
+import { contactoModal } from '../contacto/contacto';
+// import { addEventOnElement, addEventsOnElement } from './util/util';
+
 import logo from '/src/assets/images/Logo.png';
 
-import '/src/styles.css';
+// import '/src/styles.css';
+import './styles.css';
 import 'material-symbols';
 
-import { NoteModal } from '/src/modal_contacto.js';
-
-const /* {HTMLElement} */ container = document.createElement('div');
-container.innerHTML = `
+const navbarModal = function () {
+    const /* {HTMLElement} */ $modal = document.createElement('div');
+    $modal.innerHTML = `
     <div class="contenedor">
         <div class="contenido">
             <div class="header">
@@ -80,6 +86,19 @@ container.innerHTML = `
                                 <div class="state-layer"></div>
                             </button>
                         </li>
+                        <li>
+                            <button type="button" class="fab" data-rrss-btn>
+                                <span
+                                    class="material-symbols-rounded"
+                                    aria-hidden="true"
+                                    >social_leaderboard</span
+                                >
+                                <span class="text text-label-large"
+                                    >Red Social</span
+                                >
+                                <div class="state-layer"></div>
+                            </button>
+                        </li>
                     </ul>
                 </nav>
                 <button
@@ -102,40 +121,48 @@ container.innerHTML = `
     </div>
 `;
 
-const /** {<HTMLElement} */ $inicioBtn =
-        container.querySelector('[data-inicio-btn]');
-const /** {<HTMLElement} */ $quienes_somosBtn = container.querySelector(
-        '[data-quienes-somos-btn]'
-    );
-const /** {<HTMLElement} */ $contactoBtn = container.querySelector(
-        '[data-contacto-btn]'
-    );
-const /** {<HTMLElement} */ $loginBtn =
-        container.querySelector('[data-login-btn]');
+    const /** {<HTMLElement} */ $inicioBtn =
+            $modal.querySelector('[data-inicio-btn]');
 
-$inicioBtn.addEventListener('click', function () {
-    // Create and open a new modal
-    const /** {Object} */ modal = NoteModal();
-    modal.open();
-});
-$quienes_somosBtn.addEventListener('click', function () {
-    import('/src/enconstruccion.js').then(({ NoteModal }) => {
-        const /** {Object} */ modal = NoteModal();
-        modal.open();
+    const /** {<HTMLElement} */ $quienes_somosBtn = $modal.querySelector(
+            '[data-quienes-somos-btn]'
+        );
+    const /** {<HTMLElement} */ $contactoBtn = $modal.querySelector(
+            '[data-contacto-btn]'
+        );
+    const /** {<HTMLElement} */ $loginBtn =
+            $modal.querySelector('[data-login-btn]');
+
+    $inicioBtn.addEventListener('click', function () {
+        window.location.href = '/';
     });
-});
-$contactoBtn.addEventListener('click', function () {
-    const /** {HTMLElement} */ $body = document.body;
-    $body.innerHTML = '';
 
-    const /** {Object} */ modal = NoteModal();
-    modal.open();
-});
-$loginBtn.addEventListener('click', function () {
-    import('/src/enconstruccion.js').then(({ NoteModal }) => {
-        const /** {Object} */ modal = NoteModal();
-        modal.open();
+    $quienes_somosBtn.addEventListener('click', function () {
+        const body = document.body;
+        body.innerHTML = '';
+
+        const /** {Object} */ $modal = qsModal();
+        $modal.open();
+
+        // import('/src/quienes_somos/quienes_somos.js').then(() => {});
+        // window.location.href = '/quienes_somos';
     });
-});
 
-document.body.appendChild(container);
+    $contactoBtn.addEventListener('click', function () {
+        const /** {Object} */ $modal = contactoModal();
+        $modal.open();
+    });
+
+    $loginBtn.addEventListener('click', function () {
+        const /** {Object} */ $modal = loginModal();
+        $modal.open();
+    });
+
+    const open = function () {
+        document.body.appendChild($modal);
+    };
+
+    return { open };
+};
+
+export { navbarModal };

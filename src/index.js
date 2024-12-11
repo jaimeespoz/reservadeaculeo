@@ -1,13 +1,34 @@
 'use strict';
 
-import '/src/util/theme.js';
-import '/src/navbar.js';
-import '/src/home.js';
-import '/src/footer.js';
+import 'styles.css';
 
-const /* {HTMLElement} */ container = document.createElement('div');
-container.innerHTML = `
-`;
+import { homeModal } from './shared/home/home';
+import { footerModal } from './shared/footer';
+import { navbarModal } from './shared/navbar/navbar';
+
+import '/src/util/theme.js';
+// import '/src/navbar.js';
+// import '/src/home.js';
+// import '/src/shared/footer';
+
+const body = document.body;
+body.innerHTML = '';
+
+const /** {Object} */ $navbarmodal = navbarModal();
+$navbarmodal.open();
+
+const /** {Object} */ $homemodal = homeModal();
+$homemodal.open();
+
+const /** {Object} */ $footermodal = footerModal();
+$footermodal.open();
+
+// import { navbar } from './navbar';
+
+// document.body.appendChild(navbar);
+
+// const /* {HTMLElement} */ container = document.createElement('div');
+// container.innerHTML = navbar;
 
 // const bars = document.querySelector('.bars');
 // bars.addEventListener('click', () => {

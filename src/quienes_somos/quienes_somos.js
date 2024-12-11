@@ -1,0 +1,146 @@
+'use strict';
+
+import '/src/styles.css';
+import './quienes_somos.css';
+
+import { footerModal } from '../shared/footer';
+import { navbarModal } from '../shared/navbar/navbar';
+
+const qsModal = function () {
+    const /* {HTMLElement} */ $modal = document.createElement('div');
+    $modal.innerHTML = `
+    <div class="contenedor">
+        <div class="contenido">
+            <div class="layer-quienes">
+                <div class="recuadro-participantes">
+                    <div class="imagen">
+                        <img src="/src/assets/images/persona-01.jpeg" alt="">
+                    </div>
+                    <div class="nombre">
+                        <span>Juan Perez Perez</span>
+                    </div>
+                    <div class="cargo">
+                        <span>Presidente Junta de Vecinos</span>
+                    </div>
+                    <div class="correo">
+                        <span>jperez@gmail.com</span>
+                    </div>
+                    <div class="celular">
+                        <span>+56 9 1234 1234</span>
+                    </div>
+                    <div class="card__modal"></div>
+                </div>
+                <div class="recuadro-participantes">
+                    <div class="imagen">
+                        <img src="/src/assets/images/persona-02.jpeg" alt="">
+                    </div>
+                    <div class="nombre">
+                        <span>Juan Perez Perez</span>
+                    </div>
+                    <div class="cargo">
+                        <span>Presidente Junta de Vecinos</span>
+                    </div>
+                    <div class="correo">
+                        <span>jperez@gmail.com</span>
+                    </div>
+                    <div class="celular">
+                        <span>+56 9 1234 1234</span>
+                    </div>
+                    <div class="card__modal"></div>
+                </div>
+                <div class="recuadro-participantes">
+                    <div class="imagen">
+                        <img src="/src/assets/images/persona-03.jpeg" alt="">
+                    </div>
+                    <div class="nombre">
+                        <span>Juan Perez Perez</span>
+                    </div>
+                    <div class="cargo">
+                        <span>Presidente Junta de Vecinos</span>
+                    </div>
+                    <div class="correo">
+                        <span>jperez@gmail.com</span>
+                    </div>
+                    <div class="celular">
+                        <span>+56 9 1234 1234</span>
+                    </div>
+                    <div class="card__modal"></div>
+                </div>
+                </div>
+                <div class="layer-quienes">
+                <div class="recuadro-participantes">
+                    <div class="imagen">
+                        <img src="/src/assets/images/Caterine Deneuve.png" alt="">
+                    </div>
+                    <div class="nombre">
+                        <span>Caterine Deneuve</span>
+                    </div>
+                    <div class="cargo">
+                        <span>Secretaria</span>
+                    </div>
+                    <div class="correo">
+                        <span>jperez@gmail.com</span>
+                    </div>
+                    <div class="celular">
+                        <span>+56 9 1234 1234</span>
+                    </div>
+                    <div class="card__modal"></div>
+                </div>
+                </div>
+                <div class="layer-quienes">
+                <div class="recuadro-participantes">
+                    <div class="imagen">
+                        <img src="/src/assets/images/persona-04.jpeg" alt="">
+                    </div>
+                    <div class="nombre">
+                        <span>Juan Perez Perez</span>
+                    </div>
+                    <div class="cargo">
+                        <span>Presidente Junta de Vecinos</span>
+                    </div>
+                    <div class="correo">
+                        <span>jperez@gmail.com</span>
+                    </div>
+                    <div class="celular">
+                        <span>+56 9 1234 1234</span>
+                    </div>
+                    <div class="card__modal"></div>
+                </div>
+                <div class="recuadro-participantes">
+                    <div class="imagen">
+                        <img src="/src/assets/images/persona-05.jpeg" alt="">
+                    </div>
+                    <div class="nombre">
+                        <span>Juan Perez Perez</span>
+                    </div>
+                    <div class="cargo">
+                        <span>Presidente Junta de Vecinos</span>
+                    </div>
+                    <div class="correo">
+                        <span>jperez@gmail.com</span>
+                    </div>
+                    <div class="celular">
+                        <span>+56 9 1234 1234</span>
+                    </div>
+                    <div class="card__modal"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+`;
+
+    const open = function () {
+        const /** {Object} */ $navbarmodal = navbarModal();
+        $navbarmodal.open();
+
+        document.body.appendChild($modal);
+
+        const /** {Object} */ $footermodal = footerModal();
+        $footermodal.open();
+    };
+
+    return { open };
+};
+
+export { qsModal };

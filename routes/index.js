@@ -14,7 +14,7 @@ router.get('/login', (req, res) => {
 });
 
 router.get('/quienes_somos', (req, res) => {
-    res.render('quienes_somos.html');
+    res.render('index.html');
 });
 
 router.get('/enconstruccion', (req, res) => {

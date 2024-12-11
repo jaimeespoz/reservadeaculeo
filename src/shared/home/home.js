@@ -6,8 +6,9 @@ import foto06 from '/src/assets/images/foto-06.jpg';
 import copihues from '/src/assets/images/copihues.jpg';
 import chilenidad from '/src/assets/images/Semana-de-la-Chilenidad-2019.jpg';
 
-const /* {HTMLElement} */ container = document.createElement('div');
-container.innerHTML = `<div class="contenedor">
+const homeModal = function () {
+    const /* {HTMLElement} */ $modal = document.createElement('div');
+    $modal.innerHTML = `<div class="contenedor">
         <div class="contenido">
         <div class="frame-home">
             <div class="wrapper-home">
@@ -116,8 +117,15 @@ container.innerHTML = `<div class="contenedor">
         </div>
     </div>
 `;
+    const open = function () {
+        document.body.appendChild($modal);
+    };
 
-document.body.appendChild(container);
+    return { open };
+};
+
+export { homeModal };
+// document.body.appendChild(container);
 // const home = container;
 
 // export { home };

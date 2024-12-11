@@ -24,63 +24,83 @@
     <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png" />
-    <!-- <link rel="manifest" href="./icons/site.webmanifest"> -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/src/pruebas/pruebas.css" />
     <title>Document</title>
+    <style>
+        select {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            font-size: 1.05rem;
+            padding: 8px 36px 8px 8px;
+            width: 280px;
+            background: #4d5061;
+            color: white;
+            border: 0;
+            margin: 12px;
+
+            /* padding: 4px 12px; */
+            /* height: 32px; */
+        }
+
+        .custom-select {
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+        .custom-arrow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            height: 100%;
+            width: 1rem 100%;
+            pointer-events: none;
+        }
+
+        /* .custom-arrow::before,
+        .custom-arrow::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        } */
+
+        /* .custom-arrow::before {
+            border-left: 1em solid transparent;
+            border-right: 1em solid transparent;
+            border-bottom: 1em solid rgba(255, 255, 255, .5);
+            top: 30%;
+        } */
+
+        /* .custom-arrow::after {
+            border-left: 1em solid transparent;
+            border-right: 1em solid transparent;
+            border-top: 1em solid rgba(255, 255, 255, .5);
+            top: 60%;
+        } */
+    </style>
 </head>
 
 <body>
-    <div class="contenedor">
-        <div class="contenido">
-            <div class="wrapper">
-                <div class="layer">
-                    <div>
-                        <a href="/">
-                            <img src="${logo}" class="logo-chico" alt="" />
-                        </a>
-                    </div>
-                    <div>
-                        <span class="text-title-large">Junta de Vecinos</span>
-                        <span class="text-title-large">Reserva de Aculeo</span>
-                        <span class="text-body-small">Const.: Octubre-2024</span>
-                        <span class="text-body-small">Comuna de Paine</span>
-                        <span class="text-body-small">Region Metropolitana</span>
-                    </div>
-                </div>
-                <!-- <div class="inner-wrapper"> -->
-                <div class="layer">
-                    <div class="col-dos">
-                        <span class="text-title-large">Contacto</span>
-                    </div>
-                    <div class="col-dos">
-                        <span class="text-title-large">Incorporacion</span>
-                    </div>
-                    <div class="col-dos">
-                        <span class="text-title-large">Otra Info</span>
-                    </div>
-                    <div class="col-dos">
-                        <span class="text-title-large">Otra Info</span>
-                    </div>
-                    <div class="col-dos">
-                        <span class="text-title-large">Nuestra Comunidad</span>
-                    </div>
-                    <div class="col-dos">
-                        <span class="text-title-large">Otra Info</span>
-                    </div>
-                </div>
-                <!-- </div> -->
-            </div>
-        </div>
+
+    <div class="custom-select">
+        <select id="condominios" data-condominios>
+            <option value="01">Uno</option>
+            <option value="02">Dos</option>
+            <option value="03">Tres</option>
+            <option value="04">Cuatro</option>
+        </select>
+        <span class="custom-arrow"></span>
     </div>
 
+    <script>
+        const /***/ $condominios = document.querySelector('[data-condominios]')
+
+        $condominios.addEventListener('change', () => {
+            const valor = $condominios.value;
+            console.log(valor)
+        })
+    </script>
 </body>
 
 </html>

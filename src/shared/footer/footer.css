@@ -1,0 +1,103 @@
+/* footer */
+.frame-footer {
+    background-color: var(--footer-back);
+    color: var(--footer-fore);
+    padding: 48px;
+}
+
+.wrapper-footer {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+
+.layer-footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: left;
+    /* color: rgb(230, 230, 230); */
+}
+
+.col-footer {
+    /* color: rgb(230, 230, 230); */
+    margin: 12px 6px;
+    flex-basis: 22%;
+
+    span {
+        padding: 1px;
+        text-wrap: nowrap;
+    }
+
+    ul {
+        li {
+            a {
+                padding: 3px;
+                transition: all 0.4s;
+            }
+            a:hover {
+                color: rgb(80, 80, 80);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .frame-footer {
+        padding: 48px;
+    }
+    .wrapper-footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* justify-content: flex-start; */
+        /* align-content: flex-start; */
+        /* align-items: left; */
+    }
+
+    .col-footer {
+        margin: 18px 0;
+        /* align-items: left; */
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .frame-footer {
+        padding: 48px;
+        /* align-items: left; */
+    }
+
+    .wrapper-footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* justify-content: flex-start; */
+        /* align-content: flex-start; */
+        /* align-items: left; */
+    }
+
+    .col-footer {
+        margin: 18px 0;
+        /* align-items: left; */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .frame-footer {
+        padding: 48px;
+    }
+    .wrapper-footer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        /* justify-content: flex-start; */
+        /* align-content: flex-start; */
+        /* align-items: left; */
+    }
+
+    .col-footer {
+        margin: 18px 0;
+        /* align-items: left; */
+    }
+}

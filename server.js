@@ -37,9 +37,11 @@ app.use(
     .use(logger);
 
 const homeRutas = require('./routes/index');
+const booksRoute = require('./routes/booksRoute');
 
 // Routes
 app.use('/', homeRutas);
+app.use('/api/books', booksRoute);
 
 // Static Files
 // app.use(express.static(path.join(__dirname, 'src')));

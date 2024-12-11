@@ -1,6 +1,5 @@
 'use strict';
 import '/src/styles.css';
-// import '../../src/login/login.css';
 
 import Valdivia from '/src/assets/images/Valdivia.jpg';
 

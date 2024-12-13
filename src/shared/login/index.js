@@ -42,6 +42,11 @@ const loginModal = function () {
                         >Iniciar Sesion</span
                     >
                 </div>
+
+                <div>
+                    <hr class="solid">
+                </div>
+                
                 <div>
                     <label for="email" class="text-title-very-small"
                         >Nombre de Usuario / Direccion de Correo</label
@@ -54,6 +59,10 @@ const loginModal = function () {
                         class="text-title-medium form-control"
                         data-note-field
                     />
+                </div>
+
+                <div>
+                    <hr class="salto">
                 </div>
 
                 <div>
@@ -82,10 +91,6 @@ const loginModal = function () {
                         >
                         <div class="state-layer"></div>
                     </button>
-                </div>
-
-                <div>
-                    <hr class="solid">
                 </div>
 
                 <div class="layer-terminos">
@@ -121,6 +126,7 @@ const loginModal = function () {
         );
     const /** {HTMLElement} */ $forgetBtn =
             $modal.querySelector('[data-forget-btn]');
+
     const /** {HTMLElement} */ $registrarseBtn = $modal.querySelector(
             '[data-registrarse-btn]'
         );
@@ -137,18 +143,22 @@ const loginModal = function () {
         const /** {Object} */ modal = enConstruccionModal();
         modal.open();
     });
+
     $forgetBtn.addEventListener('click', function () {
         const /** {Object} */ modal = enConstruccionModal();
         modal.open();
     });
+
     $registrarseBtn.addEventListener('click', function () {
         const /** {Object} */ modal = enConstruccionModal();
         modal.open();
     });
+
     $terminosBtn.addEventListener('click', function () {
         const /** {Object} */ modal = enConstruccionModal();
         modal.open();
     });
+
     $seguridadBtn.addEventListener('click', function () {
         const /** {Object} */ modal = enConstruccionModal();
         modal.open();

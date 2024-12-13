@@ -8,8 +8,8 @@
     align-content: center;
     /* text-align: left; */
     /* color: rgb(230, 230, 230); */
-    padding: 24px;
-    height: 520px;
+    /* padding: 24px; */
+    /* height: 520px; */
 }
 
 .layer-contacto {
@@ -22,6 +22,10 @@
 }
 
 .layer-terminos {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-top: 1px solid #bbb;
+
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -30,11 +34,6 @@
     text-align: center;
     font-size: 0.75rem;
     color: lightgrey;
-}
-
-.separador {
-    padding: 12px 0;
-    border: 1px solid gray;
 }
 
 hr.solid {
@@ -47,7 +46,7 @@ hr.solid {
     left: 50%;
     transform: translate(-50%, -50%);
     max-width: 420px;
-    height: 510px;
+    height: 580px;
     width: calc(100% - var(--spacing-8));
     background-color: var(--surface-container-highest);
     border-radius: var(--radius-large);

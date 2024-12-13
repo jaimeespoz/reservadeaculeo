@@ -25,11 +25,6 @@ const navbarModal = function () {
                             alt="Reserva de Aculeo"
                     /></a>
                 </div>
-                <div class="bars">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
                 <nav class="nav-bar">
                     <ul>
                         <li>

@@ -4,6 +4,8 @@ import 'material-symbols';
 
 import logo from '/src/assets/images/Logo.png';
 
+import { enConstruccionModal } from '../enconstruccion';
+
 const /** {HTMLElement} */ $overlay = document.createElement('div');
 $overlay.classList.add('overlay', 'modal-overlay');
 
@@ -24,92 +26,109 @@ const contactoModal = function () {
 
     $modal.innerHTML = `
         <div class="wrapper-contacto">
-            <button
-                class="icon-btn large"
-                aria-label="Close modal"
-                data-modal-close-btn
-            >
-                <span class="material-symbols-rounded" aria-hidden="true"
-                    >close</span
+            <div>
+                <button
+                    class="icon-btn large"
+                    aria-label="Close modal"
+                    data-modal-close-btn
                 >
-                <div class="state-layer"></div>
-            </button>
-            <div class="layer-contacto">
-                <div>
-                    <a href="/">
-                        <img src="${logo}" class="logo-chico" alt="" />
-                    </a>
+                    <span class="material-symbols-rounded" aria-hidden="true"
+                        >close</span
+                    >
+                    <div class="state-layer"></div>
+                </button>
+                <div class="layer-contacto">
+                    <div>
+                        <a href="/">
+                            <img src="${logo}" class="logo-chico" alt="" />
+                        </a>
+                    </div>
+                    <div>
+                        <span class="text-title-medium">Junta de Vecinos</span>
+                        <span class="text-title-medium">Reserva de Aculeo</span>
+                    </div>
                 </div>
-                <div>
-                    <span class="text-title-medium">Junta de Vecinos</span>
-                    <span class="text-title-medium">Reserva de Aculeo</span>
+                <div class="wrapper-contacto">
+                    <div>
+                        <span class="text-title-large text-bold"
+                            >Contactenos</span
+                        >
+                    </div>
+
+                    <div>
+                        <hr class="solid" />
+                    </div>
                 </div>
             </div>
-            <div class="wrapper-contacto">
                 <div>
-                    <span class="text-title-large text-bold"
-                        >Contactenos</span
-                    >
-                </div>
-                <div>
-                    <label for="email" class="text-title-very-small"
-                        >Direccion de Correo</label
-                    >
-                    <input
-                        id="email"
-                        type="text"
-                        placeholder="ingrese Correo"
-                        value=""
-                        class="text-title-medium form-control"
-                        data-note-field
-                    />
-                </div>
-                <div>
-                    <label for="asunto" class="text-title-very-small"
-                        >Asunto</label
-                    >
-                    <input
-                        id="asunto"
-                        type="text"
-                        placeholder="ingrese Correo"
-                        value=""
-                        class="text-title-medium form-control"
-                        data-note-field
-                    />
-                </div>
-                <div>
-                    <label for="mensaje" class="text-title-very-small"
-                        >Asunto</label
-                    >
-                    <textarea id="mensaje" placeholder="Ingrese un texto..." class="modal-text text-body-large custom-scrollbar">Ingrese un texto</textarea>
+                    <div>
+                        <label for="email" class="text-title-very-small"
+                            >Direccion de Correo</label
+                        >
+                        <input
+                            id="email"
+                            type="text"
+                            placeholder="ingrese Correo"
+                            value=""
+                            class="text-title-medium form-control"
+                            data-note-field
+                        />
+                    </div>
+                    <div>
+                        <label for="asunto" class="text-title-very-small"
+                            >Asunto</label
+                        >
+                        <input
+                            id="asunto"
+                            type="text"
+                            placeholder="ingrese Correo"
+                            value=""
+                            class="text-title-medium form-control"
+                            data-note-field
+                        />
+                    </div>
+                    <div>
+                        <label for="mensaje" class="text-title-very-small"
+                            >Asunto</label
+                        >
+                        <textarea
+                            id="mensaje"
+                            placeholder="Ingrese un texto..."
+                            class="modal-text text-body-large custom-scrollbar"
+                        >
+Ingrese un texto</textarea
+                        >
+                    </div>
+
+                    <div>
+                        <hr class="salto" />
+                    </div>
                 </div>
 
                 <div>
-                    <button type="button" class="fab" data-enviar-btn>
-                        <span class="text text-label-large">Enviar</span>
-                        <div class="state-layer"></div>
-                    </button>
+                    <div>
+                        <button type="button" class="fab" data-enviar-btn>
+                            <span class="text text-label-large">Enviar</span>
+                            <div class="state-layer"></div>
+                        </button>
+                    </div>
+
+                    <div class="layer-terminos">
+                        <button type="button" data-terminos-btn>
+                            <span class="text-label-small"
+                                >Terminos de Uso</span
+                            >
+                            <div class="state-layer"></div>
+                        </button>
+
+                        <button type="button" data-seguridad-btn>
+                            <span class="text-label-small">Seguridad</span>
+                            <div class="state-layer"></div>
+                        </button>
+                    </div>
                 </div>
-
-                <div>
-                    <hr class="solid">
-                </div>
-
-                <div class="layer-terminos">
-                    <button type="button" data-terminos-btn>
-                        <span class="text-label-small">Terminos de Uso</span>
-                        <div class="state-layer"></div>
-                    </button>
-
-                    <button type="button" data-seguridad-btn>
-                        <span class="text-label-small">Seguridad</span>
-                        <div class="state-layer"></div>
-                    </button>
-                </div>
-
             </div>
-        </div>
-`;
+    `;
     const open = function () {
         document.body.appendChild($modal);
         document.body.appendChild($overlay);
@@ -121,6 +140,12 @@ const contactoModal = function () {
         document.body.removeChild($overlay);
         // $titleField.focus();
     };
+
+    const /** {HTMLElement} */ $modalCloseBtn = $modal.querySelector(
+            '[data-modal-close-btn]'
+        );
+    const /** {HTMLElement} */ $enviarBtn =
+            $modal.querySelector('[data-enviar-btn]');
 
     /**
      * Handles the submission of a note within the model
@@ -136,6 +161,12 @@ const contactoModal = function () {
             callback(noteData);
         });
     };
+    $modalCloseBtn.addEventListener('click', close);
+
+    $enviarBtn.addEventListener('click', function () {
+        const /** {Object} */ modal = enConstruccionModal();
+        modal.open();
+    });
 
     return { open, close, onSubmit };
 };

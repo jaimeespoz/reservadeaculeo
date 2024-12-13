@@ -8,8 +8,8 @@
     align-content: center;
     /* text-align: left; */
     /* color: rgb(230, 230, 230); */
-    padding: 24px;
-    height: 520px;
+    /* padding: 24px; */
+    /* height: 520px; */
 }
 
 .layer-login {
@@ -23,6 +23,9 @@
 }
 
 .layer-terminos {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-top: 1px solid #bbb;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -33,13 +36,18 @@
     color: lightgrey;
 }
 
-.separador {
-    padding: 12px 0;
-    border: 1px solid gray;
+hr.solid {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    /* padding: 8px 0px; */
+    border-top: 1px solid #bbb;
 }
 
-hr.solid {
-    border-top: 1px solid #bbb;
+hr.salto {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 12px;
 }
 
 .modal {

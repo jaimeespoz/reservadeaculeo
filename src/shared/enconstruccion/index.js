@@ -28,6 +28,10 @@ const enConstruccionModal = function () {
                 <span class="material-symbols-outlined" aria-hidden="true"
                     >close</span
                 >
+                <div>
+                    <hr class="solid">
+                </div>
+
                 <span class="text text-label-large">Cerrar</span>
                 <div class="state-layer"></div>
             </button>

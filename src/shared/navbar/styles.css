@@ -8,6 +8,8 @@
     align-content: center;
     align-items: center;
     height: 80px;
+    left: 0;
+    /* width: 100%; */
     padding: 0px 100px;
 
     .logo {
@@ -21,17 +23,6 @@
         img:hover {
             transform: scale(1.2);
         }
-    }
-
-    .bars {
-        display: none;
-    }
-
-    .bars .line {
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        margin: 6px 0px;
     }
 
     .nav-bar {
@@ -63,6 +54,11 @@
     }
 }
 
+hr.solid {
+    border-top: 1px solid #bbb;
+    padding: 24px 0;
+}
+
 @media only screen and (max-width: 900px) {
     .header {
         display: flex;
@@ -71,43 +67,31 @@
         align-content: center;
         align-items: center;
         padding: 8px 30px;
+    }
 
-        .bars {
+    .nav-bar {
+        height: 0px;
+        position: absolute;
+        top: 116px;
+        left: 36px;
+        /* right: 0; */
+        /* width: 100vw; */
+        width: 340px;
+        background-color: #1b3039;
+        transition: 0.5s;
+        overflow: hidden;
+        z-index: 999;
+
+        ul {
             display: block;
-            cursor: pointer;
-        }
-
-        .bars .line {
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            margin: 6px 0px;
-        }
-
-        .nav-bar {
-            height: 0px;
-            position: absolute;
-            top: 116px;
-            left: 36px;
-            /* right: 0; */
-            /* width: 100vw; */
-            width: 340px;
-            background-color: #1b3039;
-            transition: 0.5s;
-            overflow: hidden;
-            z-index: 999;
-
-            ul {
-                display: block;
-                width: fit-content;
-                /* margin: 80px auto 40px auto; */
-                margin: 20px auto 40px auto;
-                text-align: start;
-                opacity: 0;
-                border: 1px solid lightgray;
-                border-radius: 12px;
-                padding: 32px 48px;
-            }
+            width: fit-content;
+            /* margin: 80px auto 40px auto; */
+            margin: 20px auto 40px auto;
+            text-align: start;
+            opacity: 0;
+            border: 1px solid lightgray;
+            border-radius: 12px;
+            padding: 32px 48px;
         }
     }
 }

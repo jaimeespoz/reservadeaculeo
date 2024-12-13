@@ -37,11 +37,19 @@ app.use(
     .use(logger);
 
 const homeRutas = require('./routes/index');
-const booksRoute = require('./routes/booksRoute');
+const BooksRoute = require('./routes/BooksRoute');
+const CondominiosRoute = require('./routes/CondominiosRoute');
+const EstadoCivilRoute = require('./routes/EstadoCivilRoute');
+const SectoresRoute = require('./routes/SectoresRoute');
+const SexoRoute = require('./routes/SexoRoute');
 
 // Routes
 app.use('/', homeRutas);
-app.use('/api/books', booksRoute);
+app.use('/api/books', BooksRoute);
+app.use('/api/condominios', CondominiosRoute);
+app.use('/api/estadocivil', EstadoCivilRoute);
+app.use('/api/sectores', SectoresRoute);
+app.use('/api/sexo', SexoRoute);
 
 // Static Files
 // app.use(express.static(path.join(__dirname, 'src')));

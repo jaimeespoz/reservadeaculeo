@@ -35,11 +35,12 @@
 
     ul {
         li {
-            a {
+            button {
                 padding: 3px;
+                color: var(--footer-fore);
                 transition: all 0.4s;
             }
-            a:hover {
+            button:hover {
                 color: rgb(80, 80, 80);
             }
         }

@@ -7,6 +7,6 @@ const BooksSchema = new Schema({
     create_at: { type: Date, default: Date.now },
 });
 
-// BooksSchema.clearIndex({ title: -1 });
+BooksSchema.index({ title: 1 }, { unique: true });
 
 module.exports = model('Books', BooksSchema);

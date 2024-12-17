@@ -3,19 +3,20 @@
 import 'styles.css';
 
 import { homeModal } from './shared/home/home';
-import { footerModal } from './shared/footer';
+import { footerModal } from './shared/footer/footer';
 import { navbarModal } from './shared/navbar/navbar';
+import { misionModal } from './mision/mision';
 
 import '/src/util/theme.js';
-// import '/src/navbar.js';
-// import '/src/home.js';
-// import '/src/shared/footer';
 
 const body = document.body;
 body.innerHTML = '';
 
 const /** {Object} */ $navbarmodal = navbarModal();
 $navbarmodal.open();
+
+const /** {Object} */ $misionmodal = misionModal();
+$misionmodal.open();
 
 const /** {Object} */ $homemodal = homeModal();
 $homemodal.open();

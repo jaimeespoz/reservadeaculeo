@@ -3,7 +3,7 @@
 import '/src/styles.css';
 import './quienes_somos.css';
 
-import { footerModal } from '../shared/footer';
+import { footerModal } from '../shared/footer/footer';
 import { navbarModal } from '../shared/navbar/navbar';
 
 const qsModal = function () {

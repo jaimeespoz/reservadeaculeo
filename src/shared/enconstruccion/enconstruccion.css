@@ -15,12 +15,6 @@
     animation: modal-open var(--tr-duration-medium) var(--tr-easing-emphasized) forwards;
 }
 
-hr.salto {
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
 @keyframes modal-open {
     0% {
         transform: translate(-50%, calc(-50% + var(--spacing-5)));

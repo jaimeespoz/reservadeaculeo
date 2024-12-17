@@ -1,9 +1,13 @@
 'use strict';
 
 import { enConstruccionModal } from '../enconstruccion';
-import { loginModal } from '../login';
+import { loginModal } from '../login/login';
 import { qsModal } from '../../quienes_somos/quienes_somos';
 import { contactoModal } from '../contacto/contacto';
+// import { utilidadPublicaModal } from '../../news/utilidad-publica/utilidad-publica01';
+import { footerModal } from '../footer/footer';
+import { fotosModal } from '../fotosCondominio/fotosCondominio';
+
 // import { addEventOnElement, addEventsOnElement } from './util/util';
 
 import logo from '/src/assets/images/Logo.png';
@@ -94,8 +98,23 @@ const navbarModal = function () {
                                 <div class="state-layer"></div>
                             </button>
                         </li>
+                        <li>
+                            <button type="button" class="fab" data-fotos-btn>
+                                <span
+                                    class="material-symbols-rounded"
+                                    aria-hidden="true"
+                                    >photo</span
+                                >
+                                <span class="text text-label-large"
+                                    >Fotos</span
+                                >
+                                <div class="state-layer"></div>
+                            </button>
+                        </li>
+
                     </ul>
                 </nav>
+
                 <button
                     type="button"
                     class="theme-btn icon-btn large"
@@ -127,6 +146,10 @@ const navbarModal = function () {
         );
     const /** {<HTMLElement} */ $loginBtn =
             $modal.querySelector('[data-login-btn]');
+    const /** {<HTMLElement} */ $rrssBtn =
+            $modal.querySelector('[data-rrss-btn]');
+    const /** {<HTMLElement} */ $fotosBtn =
+            $modal.querySelector('[data-fotos-btn]');
 
     $inicioBtn.addEventListener('click', function () {
         window.location.href = '/';
@@ -150,6 +173,19 @@ const navbarModal = function () {
 
     $loginBtn.addEventListener('click', function () {
         const /** {Object} */ $modal = loginModal();
+        $modal.open();
+    });
+
+    $rrssBtn.addEventListener('click', function () {
+        const /** {Object} */ $modal = enConstruccionModal();
+        $modal.open();
+    });
+
+    $fotosBtn.addEventListener('click', function () {
+        const body = document.body;
+        body.innerHTML = '';
+
+        const /** {Object} */ $modal = fotosModal();
         $modal.open();
     });
 

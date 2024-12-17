@@ -36,20 +36,6 @@
     color: lightgrey;
 }
 
-hr.solid {
-    display: block;
-    margin-top: 8px;
-    margin-bottom: 8px;
-    /* padding: 8px 0px; */
-    border-top: 1px solid #bbb;
-}
-
-hr.salto {
-    display: block;
-    margin-top: 12px;
-    margin-bottom: 12px;
-}
-
 .modal {
     position: fixed;
     top: 50%;

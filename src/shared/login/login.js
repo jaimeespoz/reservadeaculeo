@@ -61,22 +61,14 @@ const loginModal = function () {
                     />
                 </div>
 
-                <div>
-                    <hr class="salto">
-                </div>
-
-                <div>
+                <div class="my-8">
                     <button type="button" class="fab" data-continuar-btn>
                         <span class="text text-label-large">Continuar</span>
                         <div class="state-layer"></div>
                     </button>
                 </div>
 
-                <div>
-                    <hr class="solid">
-                </div>
-
-                <div>
+                <div class="my-4">
                     <button type="button" data-forget-btn>
                         <span class="text-label-small"
                             >¿ Olvido su nombre de usuario ?</span
@@ -84,7 +76,7 @@ const loginModal = function () {
                         <div class="state-layer"></div>
                     </button>
                 </div>
-                <div>
+                <div class="my-4">
                     <button type="button" data-registrarse-btn>
                         <span class="text-label-small"
                             >Crear una cuenta de Usuario</span
@@ -93,7 +85,7 @@ const loginModal = function () {
                     </button>
                 </div>
 
-                <div class="layer-terminos">
+                <div class="layer-terminos mt-3 mb-2">
                     <button type="button" data-terminos-btn>
                         <span class="text-label-small">Terminos de Uso</span>
                         <div class="state-layer"></div>

@@ -74,22 +74,22 @@ const contactoModal = function () {
                             data-note-field
                         />
                     </div>
-                    <div>
+                    <div class="mt-4">
                         <label for="asunto" class="text-title-very-small"
                             >Asunto</label
                         >
                         <input
                             id="asunto"
                             type="text"
-                            placeholder="ingrese Correo"
+                            placeholder="ingrese un Asunto"
                             value=""
                             class="text-title-medium form-control"
                             data-note-field
                         />
                     </div>
-                    <div>
+                    <div class="mt-4">
                         <label for="mensaje" class="text-title-very-small"
-                            >Asunto</label
+                            >Texto del Mensaje</label
                         >
                         <textarea
                             id="mensaje"
@@ -98,10 +98,6 @@ const contactoModal = function () {
                         >
 Ingrese un texto</textarea
                         >
-                    </div>
-
-                    <div>
-                        <hr class="salto" />
                     </div>
                 </div>
 

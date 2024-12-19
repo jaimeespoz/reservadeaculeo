@@ -16,6 +16,7 @@ import { news02Modal } from './news/newsfmt02/newsfmt02';
 import { qsModal } from './quienes_somos/quienes_somos';
 import { contactoModal } from './shared/contacto/contacto';
 import { loginModal } from './shared/login/login';
+import { avisoModal } from './shared/aviso-inicial';
 
 import '/src/util/theme.js';
 
@@ -169,7 +170,9 @@ $mision06Btn.addEventListener('click', function () {
         }
     );
 });
-/** Home */
+/** Aviso */
+const /** {Object} */ modal = avisoModal();
+modal.open();
 
 /** */
 /** Footer */

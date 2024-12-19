@@ -20,7 +20,7 @@ const qsModal = function () {
                         <span>Juan Perez Perez</span>
                     </div>
                     <div class="cargo">
-                        <span>Presidente Junta de Vecinos</span>
+                        <span>Presidente Unidad Vecinal</span>
                     </div>
                     <div class="correo">
                         <span>jperez@gmail.com</span>
@@ -38,7 +38,7 @@ const qsModal = function () {
                         <span>Juan Perez Perez</span>
                     </div>
                     <div class="cargo">
-                        <span>Presidente Junta de Vecinos</span>
+                        <span>Presidente Unidad Vecinal</span>
                     </div>
                     <div class="correo">
                         <span>jperez@gmail.com</span>
@@ -56,7 +56,7 @@ const qsModal = function () {
                         <span>Juan Perez Perez</span>
                     </div>
                     <div class="cargo">
-                        <span>Presidente Junta de Vecinos</span>
+                        <span>Presidente Unidad Vecinal</span>
                     </div>
                     <div class="correo">
                         <span>jperez@gmail.com</span>
@@ -96,7 +96,7 @@ const qsModal = function () {
                         <span>Juan Perez Perez</span>
                     </div>
                     <div class="cargo">
-                        <span>Presidente Junta de Vecinos</span>
+                        <span>Presidente Unidad Vecinal</span>
                     </div>
                     <div class="correo">
                         <span>jperez@gmail.com</span>
@@ -114,7 +114,7 @@ const qsModal = function () {
                         <span>Juan Perez Perez</span>
                     </div>
                     <div class="cargo">
-                        <span>Presidente Junta de Vecinos</span>
+                        <span>Presidente Unidad Vecinal</span>
                     </div>
                     <div class="correo">
                         <span>jperez@gmail.com</span>

@@ -828,6 +828,11 @@ input::placeholder {
     height: 160px;
 }
 
+.logo-mediano {
+    width: 60px;
+    height: 60px;
+}
+
 .logo-chico {
     width: 42px;
     height: 42px;

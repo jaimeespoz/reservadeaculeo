@@ -32,7 +32,7 @@ const loginModal = function () {
                     </a>
                 </div>
                 <div>
-                    <span class="text-title-medium">Junta de Vecinos</span>
+                    <span class="text-title-medium">Unidad Vecinal</span>
                     <span class="text-title-medium">Reserva de Aculeo</span>
                 </div>
             </div>

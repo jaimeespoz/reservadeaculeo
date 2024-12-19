@@ -17,7 +17,7 @@ qsModal.innerHTML = `
             <div class="row">
               <div class="icon">1</div>
               <div class="description">
-                <h4>Presidente Junta de Vecinos</h4>
+                <h4>Unidad Vecinal</h4>
                 <p>Juan Perez</p>
               </div>
             </div>

@@ -52,7 +52,7 @@ hr.solid {
     border-radius: var(--radius-large);
     padding: var(--spacing-6);
     box-shadow: var(--shadow-3);
-    z-index: 8;
+    z-index: 999;
     animation: modal-open var(--tr-duration-medium) var(--tr-easing-emphasized) forwards;
 }
 

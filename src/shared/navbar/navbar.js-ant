@@ -1,0 +1,191 @@
+'use strict';
+
+import '../../globalstyles.css';
+import './styles.css';
+import 'material-symbols';
+
+import { enConstruccionModal } from '../enconstruccion/index.js';
+import { loginModal } from '../login/login.js';
+import { qsModal } from '../../quienes_somos/quienes_somos.js';
+import { contactoModal } from '../contacto/contacto.js';
+// import { utilidadPublicaModal } from '../../news/utilidad-publica/utilidad-publica01';
+import { footerModal } from '../footer/footer.js';
+import { fotosModal } from '../fotosCondominio/fotosCondominio.js';
+
+// import { addEventOnElement, addEventsOnElement } from './util/util';
+
+import logo from '/src/assets/images/Logo.png';
+
+const navbarModal = function () {
+    const /* {HTMLElement} */ $modal = document.createElement('div');
+    $modal.innerHTML = `
+    <div class="contenedor">
+        <div class="contenido">
+        
+            <div class="header">
+                <div class="logo">
+                    <a href="/index.html"><img src="${logo}" alt="Reserva de Aculeo" /></a>
+                </div>
+                <nav class="nav-bar">
+                    <ul>
+                        <li>
+                            <button type="button" class="fab" data-inicio-btn>
+                                <span class="material-symbols-outlined" aria-hidden="true">home</span>
+                                <span class="text text-label-large">Inicio</span>
+                                <div class="state-layer"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="fab" data-quienes-somos-btn>
+                                <span class="material-symbols-rounded" aria-hidden="true">Group</span>
+                                <span class="text text-label-large">Quienes Somos</span>
+                                <div class="state-layer"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="fab" data-login-btn>
+                                <span class="material-symbols-rounded" aria-hidden="true">login</span>
+                                <span class="text text-label-large">Login</span>
+                                <div class="state-layer"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="fab" data-contacto-btn>
+                                <span class="material-symbols-rounded" aria-hidden="true">Mail</span>
+                                <span class="text text-label-large">Contacto</span>
+                                <div class="state-layer"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="fab" data-rrss-btn>
+                                <span class="material-symbols-rounded" aria-hidden="true">social_leaderboard</span>
+                                <span class="text text-label-large">Red Social</span>
+                                <div class="state-layer"></div>
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="fab" data-fotos-btn>
+                                <span class="material-symbols-rounded" aria-hidden="true">photo</span>
+                                <span class="text text-label-large">Fotos</span>
+                                <div class="state-layer"></div>
+                            </button>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="left">
+                <div class="sidebar">
+                    <!-- ------------------------------------------- -->
+                    <a class="menu-item active">
+                        <span>
+                            <i class="uil uil-home"></i></span>
+                        <h3>Home</h3>
+                    </a>
+                    <!-- ------------------------------------------- -->
+                    <a class="menu-item">
+                        <span>
+                            <i class="uil uil-compass"></i></span>
+                        <h3>Explore</h3>
+                    </a>
+                    <!-- ------------------------------------------- -->
+                    <a class="menu-item">
+                        <span>
+                            <i class="uil uil-bell"></span>
+                        <h3>Notification</h3>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+
+    const /** {<HTMLElement} */ $inicioBtn =
+            $modal.querySelector('[data-inicio-btn]');
+
+    const /** {<HTMLElement} */ $quienes_somosBtn = $modal.querySelector(
+            '[data-quienes-somos-btn]'
+        );
+    const /** {<HTMLElement} */ $contactoBtn = $modal.querySelector(
+            '[data-contacto-btn]'
+        );
+    const /** {<HTMLElement} */ $loginBtn =
+            $modal.querySelector('[data-login-btn]');
+    const /** {<HTMLElement} */ $rrssBtn =
+            $modal.querySelector('[data-rrss-btn]');
+    const /** {<HTMLElement} */ $fotosBtn =
+            $modal.querySelector('[data-fotos-btn]');
+
+    $inicioBtn.addEventListener('click', function () {
+        window.location.href = '/';
+    });
+
+    $quienes_somosBtn.addEventListener('click', function () {
+        const body = document.body;
+
+        body.innerHTML = '';
+        const /** {Object} */ $navbarmodal = navbarModal();
+        $navbarmodal.open();
+
+        const /** {Object} */ $modal = qsModal();
+        $modal.open();
+
+        const /** {Object} */ $footermodal = footerModal();
+        $footermodal.open();
+
+        // import('/src/quienes_somos/quienes_somos.js').then(() => {});
+        // window.location.href = '/quienes_somos';
+    });
+
+    $contactoBtn.addEventListener('click', function () {
+        const /** {Object} */ $modal = contactoModal();
+        $modal.open();
+    });
+
+    $loginBtn.addEventListener('click', function () {
+        const /** {Object} */ $modal = loginModal();
+        $modal.open();
+    });
+
+    $rrssBtn.addEventListener('click', function () {
+        const /** {Object} */ $modal = enConstruccionModal();
+        $modal.open();
+    });
+
+    $fotosBtn.addEventListener('click', function () {
+        const body = document.body;
+        body.innerHTML = '';
+
+        const /** {Object} */ $modal = fotosModal();
+        $modal.open();
+    });
+
+    const /** */ menuItems = $modal.querySelectorAll('.menu-item');
+    console.log(menuItems);
+    /**
+     * remove active class from all menu items
+     */
+    const /** */ changeActiveItem = () => {
+            menuItems.forEach((item) => {
+                item.classList.remove('active');
+            });
+        };
+
+    menuItems.forEach((item) => {
+        console.log(item);
+        item.addEventListener('click', () => {
+            changeActiveItem();
+            item.classList.add('active');
+        });
+    });
+
+    const open = function () {
+        document.body.appendChild($modal);
+    };
+
+    return { open };
+};
+
+export { navbarModal };

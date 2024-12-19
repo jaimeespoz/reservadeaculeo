@@ -1,4 +1,5 @@
 'use strict';
+import '../../globalstyles.css';
 import './enconstruccion.css';
 import 'material-symbols';
 

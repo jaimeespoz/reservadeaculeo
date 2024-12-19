@@ -1,3 +1,33 @@
+.wrapper-mision {
+    /* position: fixed; */
+    display: block;
+    /* top: 60px; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img01 {
+    background-image: url("../assets/fotos/Erik-Cubillos-01.jpg");
+}
+.img02 {
+    background-image: url("../assets/fotos/Erik-Cubillos-02.jpg");
+}
+.img03 {
+    background-image: url("../assets/fotos/Gladys-06.jpg");
+}
+.img04 {
+    background-image: url("../assets/fotos/Juan-Angel-01.jpg");
+}
+.img05 {
+    background-image: url("../assets/fotos/Juan-Angel-02.jpg");
+}
+.img06 {
+    background-image: url("../assets/fotos/Lucia-08.jpg");
+}
+
 .frame-mision {
     position: absolute;
     top: 50%;
@@ -9,7 +39,7 @@
     box-shadow: 0 30px 50px #dbdbdb;
 }
 
-.frame-mision .slide .item {
+.frame-mision .slide-mision .item-mision {
     width: 200px;
     height: 300px;
     position: absolute;
@@ -23,8 +53,8 @@
     transition: 0.5s;
 }
 
-.slide .item:nth-child(1),
-.slide .item:nth-child(2) {
+.slide-mision .item-mision:nth-child(1),
+.slide-mision .item-mision:nth-child(2) {
     top: 0;
     left: 0;
     transform: translate(0, 0);
@@ -33,23 +63,23 @@
     height: 100%;
 }
 
-.slide .item:nth-child(3) {
+.slide-mision .item-mision:nth-child(3) {
     left: 50%;
 }
-.slide .item:nth-child(4) {
+.slide-mision .item-mision:nth-child(4) {
     left: calc(50% + 220px);
 }
-.slide .item:nth-child(5) {
+.slide-mision .item-mision:nth-child(5) {
     left: calc(50% + 440px);
 }
 
 /* here n = 0, 1, 2, 3,... */
-.slide .item:nth-child(n + 6) {
+.slide-mision .item-mision:nth-child(n + 6) {
     left: calc(50% + 660px);
     opacity: 0;
 }
 
-.item .content {
+.item-mision .content-mision {
     border: 1px solid lightgray;
     border-radius: 12px;
     background-color: rgba(0, 0, 0, 0.08);
@@ -67,19 +97,20 @@
     display: none;
 }
 
-.slide .item:nth-child(2) .content {
+.slide-mision .item-mision:nth-child(2) .content-mision {
     display: block;
 }
 
-.content .name {
+.content-mision .name-mision {
     font-size: 36px;
+    line-height: 110%;
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0;
     animation: animate 1s ease-in-out 1 forwards;
 }
 
-.content .des {
+.content-mision .des-mision {
     font-size: 18px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -87,7 +118,7 @@
     animation: animate 1s ease-in-out 0.3s 1 forwards;
 }
 
-.content button {
+.content-mision button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;

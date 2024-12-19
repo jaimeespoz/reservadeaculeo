@@ -1,6 +1,6 @@
 'use strict';
 
-import '/src/styles.css';
+import '../../globalstyles.css';
 import './fotosCondominio.css';
 import 'material-symbols';
 

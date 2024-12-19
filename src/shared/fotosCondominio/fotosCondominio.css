@@ -1,4 +1,5 @@
 .frame-fotos {
+    top: 120px;
     width: 100%;
     margin: 24px;
     display: flex;

@@ -1,4 +1,5 @@
 'use strict';
+import '../../globalstyles.css';
 import './contacto.css';
 import 'material-symbols';
 

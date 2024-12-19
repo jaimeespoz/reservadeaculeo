@@ -1,16 +1,15 @@
 'use strict';
 
-import '../../styles.css';
+// import '../../globalstyles.css';
 import './footer.css';
 
-import { enConstruccionModal } from '../enconstruccion';
+// import { enConstruccionModal } from '../enconstruccion';
 
 import logo from '/src/assets/images/Logo.png';
-import { addEventOnElement, addEventOnElements } from '../../util/util';
 
-const footerModal = function () {
-    const /* {HTMLElement} */ $modal = document.createElement('div');
-    $modal.innerHTML = `
+// const footerModal = function () {
+const /* {HTMLElement} */ footerModal = document.createElement('div');
+footerModal.innerHTML = `
     <div class="contenedor">
         <div class="contenido">
             <div class="frame-footer">
@@ -215,28 +214,4 @@ const footerModal = function () {
     </div>
 `;
 
-    const /** {Array<HTMLElement>} */ $dataopcion =
-            $modal.querySelectorAll('[data-opcion-xx]');
-
-    addEventOnElements($dataopcion, 'click', function () {
-        const /** {Object} */ $modal = enConstruccionModal();
-        $modal.open();
-    });
-
-    const open = function () {
-        document.body.appendChild($modal);
-    };
-
-    return { open };
-};
-
 export { footerModal };
-
-// document.body.appendChild(container);
-
-// $dataopcion01.addEventListener('click', function () {
-//     import('/src/enconstruccion.js').then(({ NoteModal }) => {
-//         const /** {Object} */ modal = NoteModal();
-//         modal.open();
-//     });
-// });

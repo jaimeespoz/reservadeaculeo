@@ -1,15 +1,20 @@
 'use strict';
 
+// import '../../globalstyles.css';
+import './home.css';
+
 import Valdivia from '/src/assets/images/Valdivia.jpg';
 import foto05 from '/src/assets/images/foto-05.jpg';
 import foto06 from '/src/assets/images/foto-06.jpg';
 import copihues from '/src/assets/images/copihues.jpg';
 import chilenidad from '/src/assets/images/Semana-de-la-Chilenidad-2019.jpg';
 
-const homeModal = function () {
-    const /* {HTMLElement} */ $modal = document.createElement('div');
-    $modal.innerHTML = `<div class="contenedor">
+// const homeModal = function () {
+const /* {HTMLElement} */ homeModal = document.createElement('div');
+homeModal.innerHTML = `<div class="contenedor">
         <div class="contenido">
+                    <hr class="solid">
+            <span class="text-title-large">Actividades de la Junta Vecinal</span>
         <div class="frame-home">
             <div class="wrapper-home">
                 <div class="border">
@@ -117,15 +122,11 @@ const homeModal = function () {
         </div>
     </div>
 `;
-    const open = function () {
-        document.body.appendChild($modal);
-    };
+//     const open = function () {
+//         document.body.appendChild($modal);
+//     };
 
-    return { open };
-};
+//     return { open };
+// };
 
 export { homeModal };
-// document.body.appendChild(container);
-// const home = container;
-
-// export { home };
